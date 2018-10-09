@@ -61,3 +61,31 @@ function compareResult(num1, num2) {
   return result;
 }
 console.log(compareResult(12, 5));
+
+function doSomething(something1, something2) {
+  var something3 = something1 + something2;
+  something1 > something2
+    ? console.log("Right: ", something1)
+    : console.log("Left: " + something2);
+}
+doSomething(12, 4);
+
+var doSomething_1 = function(something1, something2) {
+  var something3 = something1 + something2;
+  something1 > something2
+    ? console.log("Right: ", something1)
+    : console.log("Left: " + something2);
+};
+doSomething_1(25, 34);
+
+(function(something1, something2) {
+  var something3 = something1 + something2;
+  something1 > something2
+    ? console.log("Right: ", something1)
+    : console.log("Left: " + something2);
+})(25, 11);
+
+var somethingFunny = (function(message) {
+  return message;
+})("something funny is being said.");
+console.log(somethingFunny);
